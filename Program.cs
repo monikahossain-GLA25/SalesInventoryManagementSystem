@@ -7,6 +7,7 @@ namespace SalesInventoryManagementSystem {
         public static void Main(string[] args)
         {
             Order objOrder = new Order();
+            objOrder.DisplayOrder();
 
             Customer objCustomer = new Customer("Monika" , "Monikahossain25@gmail.com");
 
