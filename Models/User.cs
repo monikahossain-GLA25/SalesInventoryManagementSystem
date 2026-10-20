@@ -20,9 +20,11 @@ namespace SalesInventoryManagementSystem.Models
             this.Email = email;
         }
 
-        protected void UserDetails(string message)
+        protected void UserDetails(string name , int id , string email)
         {
             Console.WriteLine($"User Name: {Name}");
+            Console.WriteLine($"User Name: {ID}");
+            Console.WriteLine($"User Name: {Email}");
         }
     }
 }
