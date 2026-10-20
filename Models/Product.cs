@@ -50,7 +50,7 @@ namespace SalesInventoryManagementSystem.Models
         }
 
         private readonly DateTime CreateDate;
-
+        public static int TotalProducts { get; private set; }
         public Product()
         {
             
