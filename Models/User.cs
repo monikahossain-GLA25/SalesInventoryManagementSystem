@@ -1,28 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SalesInventoryManagementSystem.Models
 {
     public class User
     {
+        public int Id { get; set; }
 
-        public int ID { get; set; }
+        private string _name = string.Empty;
 
-        public string Name { get; set; }
-
-        public string Email { get; set; }
-
-        public User(int id , string name , string email)
+        public string Name
         {
-            this.ID = id;
-            this.Name = name;
-            this.Email = email;
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException(
+                        "Name cannot be empty.");
+                }
+
+                _name = value;
+            }
         }
 
+        public string Email { get; set; } = string.Empty;
+
+        public User(int id, string name, string email)
+        {
+            Id = id;
+            Name = name;
+            Email = email;
+        }
+
+       
         protected string GetBasicDetails()
         {
-            return $"User ID: {ID}\nName: {Name}\nEmail: {Email}";
+            return $"User ID: {Id}\n" +
+                   $"Name: {Name}\n" +
+                   $"Email: {Email}";
         }
     }
 }

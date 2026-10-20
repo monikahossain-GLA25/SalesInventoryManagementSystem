@@ -9,7 +9,7 @@ namespace SalesInventoryManagementSystem {
             Order objOrder = new Order();
             objOrder.DisplayOrder();
 
-            Customer objCustomer = new Customer("Monika" , "Monikahossain25@gmail.com");
+            Customer objCustomer = new Customer(4 , "Monika" , "Monikahossain25@gmail.com");
 
             Product objProduct1 = new Product("Laptop", 42789);
             var ActualPrice =     objProduct1.CalculatePriceWithVat();
@@ -38,6 +38,23 @@ namespace SalesInventoryManagementSystem {
 
 
             Product keyboard = new Product("Keyboard", 1000);
+
+
+
+            ///////1 Admin
+            //            1 SalesPerson
+            //1 Customer
+
+            Admin objAdmin = new Admin(01 , "Monika " ,"monika23@gmail.com");
+            objAdmin.ManageProducts();
+
+            SalesPerson salesPerson =
+    new SalesPerson(2, "Mokbul", "mokbul@gmail.com", 6943);
+            salesPerson.CreateOrder();
+
+
+            Customer customer = new Customer(903, "Robiul ", "robiul27@gmail.com"); ;
+            
         }
     }
 
